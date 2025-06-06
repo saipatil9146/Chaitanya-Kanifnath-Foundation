@@ -50,31 +50,31 @@
         </div>
         <div class="dots"></div>
     </div>
-    <div class="Donation">
-
-        <div class="container5">
-            <div class="header-row">
-                <div class="header-text">
-                    डोनेशन साठी येथे क्लिक करा <span class="highlight-emoji">👉</span>
-                </div>
-                <button onclick="toggleDonationInfo()">Donate</button>
+    <div class="donate2">
+        <div class="donation-box" >
+            <div class="title-section" >
+                <div class="title-text"> <b>डोनेशन साठी येथे क्लिक करा 👉 </b></div>
+                <button class="btn" onclick="toggleDonation()"><b>Donate</b></button>
             </div>
 
-            <div id="donation-info" class="donation-info">
-                <div class="info-section">
-                    <div class="left bank-info">
-                        <h3>बँक माहिती:</h3>
-                        <p><strong>नाव:</strong> Chaitanya Kanifnath Foundation</p>
-                        <p><strong>बँक:</strong> Maharashtra Gramin Bank</p>
-                        <p><strong>खाते क्रमांक:</strong> 80083626489</p>
-                        <p><strong>IFSC:</strong> MAGH0005404</p>
-                        <p><strong>UPI ID:</strong> chaitanyakanifnathfoundation@axl </p>
-                    </div>
-                    <div class="right">
-                        <img src="logo/phone pay.png" alt="PhonePe" id="logo2" class="logo"
-                            onclick="openUPILink('phonepe')">
-                        <img src="logo/g pay.png" alt="Google Pay" id="logo3" class="logo"
-                            onclick="openUPILink('gpay')">
+            <div id="donationDetails">
+                <div class="bank-details" >
+                    <h3>🏦 Bank Details</h3><br>
+                    <p><strong>Account Name:</strong> चैतन्य कनिफनाथ फाउंडेशन </p>
+                    <p><strong>Bank Name:</strong> महाराष्ट्र ग्रामीण बँक </p>
+                    <p><strong>Account Number:</strong> 80083626489</p>
+                    <p><strong>IFSC Code:</strong> MAHG0005404</p>
+                </div>
+
+                <div class="qr-section">
+                    <h3>📲 QR Code</h3><br>
+                    <button class="btn" onclick="toggleQR()">QR Code साठी येथे क्लिक करा</button>
+
+                    <div id="qrContainer">
+                        <img id="qrImage" src="logo/QR code.jpg" alt="QR Code" />
+                        <br />
+                        <a id="qrDownload" href="logo/QR code.jpg" download="DonationQRCode.png" class="btn"
+                            style="margin-top:10px;">QR Download करा</a>
                     </div>
                 </div>
             </div>
