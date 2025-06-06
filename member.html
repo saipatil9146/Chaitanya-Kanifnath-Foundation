@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सदस्य </title>
+    <link rel="icon" href="logo/logo.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f18808;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #2c3e50;
+            padding: 8px 14px;
+            border-radius: 5px;
+        }
+
+        .back-link:hover {
+            background-color: #1a252f;
+        }
+
+        .card {
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            align-items: center;
+        }
+
+        .card img {
+            width: 130px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content p {
+            margin: 6px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .card-content a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .card-content a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card img {
+                margin: 0 0 10px 0;
+            }
+
+            .card-content {
+                align-items: center;
+            }
+
+            .back-link {
+                font-size: 16px;
+                padding: 6px 10px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="max-width: 1000px; margin: auto;">
+        <a href="javascript:history.back()" class="back-link">&larr; Back</a>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="logo/female logo.png" alt="Photo 1">
+            <div class="card-content">
+                <p>नाव :- सौ. सुवर्णा सुनील निळ</p>
+                <p>पद :- अध्यक्ष</p>
+                <p>संपर्क :- <a href="tel:+918459397058">8459397058</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="member/sai.jpg" alt="Photo 2">
+            <div class="card-content">
+                <p>नाव :- साईनाथ मरकड</p>
+                <p>पद :- उपाध्यक्ष</p>
+                <p>संपर्क :- <a href="tel:+919096947658">9096947658</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="member/ganesh.jpg" alt="Photo 3">
+            <div class="card-content">
+                <p>नाव :- गणेश घोडके</p>
+                <p>पद :- सचिव</p>
+                <p>संपर्क :- <a href="tel:+918459397058">8459397058</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="member/bhau.jpg" alt="Photo 4">
+            <div class="card-content">
+                <p>नाव :- भाऊसाहेब घोडके</p>
+                <p>पद :- कोषाध्यक्ष</p>
+                <p>संपर्क :- <a href="tel:+919552869273">9552869273</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="member/someshwar.jpg" alt="Photo 5">
+            <div class="card-content">
+                <p>नाव :- सोमेश्वर खैरे</p>
+                <p>पद :- सदस्य</p>
+                <p>संपर्क :- <a href="tel:+919146202570">9146202570</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="member/sharad.jpg" alt="Photo 6">
+            <div class="card-content">
+                <p>नाव :- शरद ससे </p>
+                <p>पद :- सदस्य</p>
+                <p>संपर्क :- <a href="tel:+917972782942">7972782942</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="logo/man logo.png" alt="Photo 7">
+            <div class="card-content">
+                <p>नाव :- चंद्रकांत क्षीरसागर</p>
+                <p>पद :- सदस्य</p>
+                <p>संपर्क :- <a href="tel:+919404522745">9404522745</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
