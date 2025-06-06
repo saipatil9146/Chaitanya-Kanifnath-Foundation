@@ -93,23 +93,41 @@ function toggleCard(cardId) {
 }
 
 
-// paise pathva 
-function toggleDonationInfo() {
-  var div = document.getElementById("donation-info");
-  div.style.display = div.style.display === "block" ? "none" : "block";
-}
+// /././../../././../../../paise pathva .//..././././././././/./.././././././././././././././././.
+  let donationOpen = false;
+  let qrVisible = false;
 
-function openUPILink(app) {
-  const upiId = "chaitanyakanifnathfoundation@axl"; // तुमचं Foundation UPI ID इथे टाका
-  const name = "Chaitanya Kanifnath Foundation";
-  const amount = prompt("कृपया देणगीची रक्कम प्रविष्ट करा:");
+  // Donation section toggle
+  function toggleDonation() {
+    const section = document.getElementById('donationDetails');
 
-  if (!amount || isNaN(amount)) {
-    alert("कृपया वैध रक्कम भरा.");
-    return;
+    if (!donationOpen) {
+      section.style.display = 'flex';
+      section.classList.remove("slide-up");
+      section.classList.add("slide-down");
+    } else {
+      section.classList.remove("slide-down");
+      section.classList.add("slide-up");
+      setTimeout(() => {
+        section.style.display = 'none';
+      }, 400);
+    }
+
+    donationOpen = !donationOpen;
   }
 
-  const url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+  // QR code toggle + download button show/hide
+  function toggleQR() {
+    const qrImage = document.getElementById('qrImage');
+    const qrDownload = document.getElementById('qrDownload');
 
-  window.location.href = url;
-}
+    if (!qrVisible) {
+      qrImage.style.display = 'block';
+      qrDownload.style.display = 'inline-block';
+    } else {
+      qrImage.style.display = 'none';
+      qrDownload.style.display = 'none';
+    }
+
+    qrVisible = !qrVisible;
+  }
