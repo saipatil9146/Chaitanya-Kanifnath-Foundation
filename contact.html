@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaitanya Kanifnath Foundation</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="logo/logo.png">
+    <script src="script.js" defer></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .info p {
+      font-size: 16px;
+      margin: 6px 0;
+      color: #333;
+    }
+
+    .info a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    .map-link {
+      margin-top: 20px;
+    }
+
+    .map-link img {
+      width: 110px;
+      height: 90px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .map-link img:hover {
+      transform: scale(1.1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 5px 0 20px -100px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #2c3e50;
+      padding: 8px 14px;
+      border-radius: 5px;
+    }
+
+    .back-link:hover {
+      background-color: #1a252f;
+    }
+
+    @media (max-width: 480px) {
+      .info p {
+        font-size: 15px;
+      }
+
+      .back-link {
+        font-size: 16px;
+        padding: 6px 10px;
+        margin: 1pc 0 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div style="max-width: 1000px; margin: auto;">
+    <a href="javascript:history.back()" class="back-link">&larr; Back</a>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>चैतन्य कनिफनाथ फाऊंडेशन</h1>
+      <div class="info">
+        <p><strong>पत्ता:</strong> चैतन्य कानिफनाथ फाउंडेशन, मु. पोस्ट - निवडुंगे, तालुका - पाथर्डी, जिल्हा -
+          अहिल्यानगर, महाराष्ट्र - ४१४१०६</p>
+        <p><strong>संपर्क:</strong>
+          <a href="tel:+918459397058">+91 8459397058</a> /
+          <a href="tel:+919096947658">+91 9096947658</a> /
+          <a href="tel:+919552869273">+91 9552869273</a>
+        </p>
+      </div>
+
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/Hmseq2389XsxvaJm7" target="_blank" title="Google Map वर पाहा">
+          <img src="logo/map.png" alt="Google Map Logo">
+        </a>
+        <p>🔍 <em>Google Map वर स्थान पाहण्यासाठी लोगोवर क्लिक करा</em></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="main2">
+      <!-- First Box -->
+      <div class="box">
+        <img src="logo/logo.png" alt="Foundation Logo">
+        <h2>चैतन्य कानिफनाथ फाउंडेशन</h2>
+      </div>
+      <!-- second box -->
+      <div class="box2">
+        <h3>शॉर्ट लिंक </h3>
+        <li><a href="#" onclick="openNewFile0('file1')" class="nav2">मुख्यपृष्ट </a></li>
+        <li><a href="#" onclick="openNewFile1('file1')" class="nav2">गॅलरी</a></li>
+        <li><a href="#" onclick="openNewFile2('file1')" class="nav2">बद्दल </a></li>
+        <li><a href="#" onclick="openNewFile3('file1')" class="nav2">सदस्य </a></li>
+        <li><a href="#" class="nav2">बातम्या </a></li>
+        <li><a href="#" onclick="openNewFile4('file1')" class="nav2">संपर्क </a></li>
+      </div>
+      <!-- thired Box -->
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>📱 8459397058 / 9096947658</p>
+
+        <p>📧 chaitanyakanifnathfoundation@gmail.com</p>
+      </div>
+
+      <!-- fourth Box -->
+      <div class="box">
+        <h2>Follow</h2>
+        <div class="icons">
+          <a href="https://wa.me/919096947658?text=नमस्कार🙏
+                        " target="_blank"><i class="fab fa-whatsapp"><img src="logo/whatspp.png" alt="logo"></i></a>
+          <a href="https://www.instagram.com/chaitanya_kanifnath_foundation?igsh=MWpoYWY4OHBwcTgxbA== "><i
+              class="fab fa-instagram"><img src="logo/insta.png" alt="logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function openNewFile1() {
+    var url = "Gallery.html";
+    window.open(url, "_self");
+  }
+
+  function openNewFile2() {
+    var url = "about.html";
+    window.open(url, "_self");
+  }
+  function openNewFile3() {
+    var url = "member.html";
+    window.open(url, "_self");
+  }
+  function openNewFile4() {
+    var url = "contact.html";
+    window.open(url, "_self");
+  }
+  function openNewFile0() {
+    var url = "index.html";
+    window.open(url, "_self");
+  }
+</script>
+
+</html>

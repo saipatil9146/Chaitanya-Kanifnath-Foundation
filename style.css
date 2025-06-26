@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "jost", serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  background-color: rgb(111, 9, 236);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.navbar-contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-contain .navbar-Menu {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+.navbar-contain .navbar-Menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px 8px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+.navbar-contain .navbar-Menu li a:hover {
+  color: #ff9500;
+}
+
+.navbar-toogle {
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-logo {
+  height: 95px;
+  width: 70px;
+  margin: 0 0 0 7%;
+}
+
+/* this is running name */
+.red-banner {
+  background-color: rgb(243, 102, 8);
+  color: white;
+  padding: 3px;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 5px 0 0 0;
+}
+
+.scrolling-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  right: -50%;
+  /* सुरुवातीला right बाहेर */
+}
+
+@keyframes scroll-left {
+  0% {
+    right: -120%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+/* this is a auto scroll image */
+
+.scrollimage {
+  margin: 10px 0 0 10%;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.5) translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.carousel img.active {
+  transform: scale(1) translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel img.next {
+  transform: scale(0.5) translateX(100%);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.carousel img.prev {
+  transform: scale(0.5) translateX(-100%);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 60px;
+  transition: color 0.2s;
+}
+
+.nav-button:hover {
+  color: #aaa;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: #fd9c00;
+}
+
+/* 5 points */
+
+.card {
+  max-width: 680px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+
+.top-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-container {
+  flex: 0 0 200px;
+  width: 500px;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.short-info {
+  margin-bottom: 8px;
+}
+
+.see-more {
+  color: #007bff;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 14px;
+  padding: 0;
+  margin-top: auto;
+  text-align: left;
+}
+
+.see-less {
+  display: none;
+  color: #007bff;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.extra-info {
+  display: none;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.card.expanded .extra-info {
+  display: block;
+}
+
+.card.expanded .see-less {
+  display: inline;
+}
+
+.card.expanded .see-more {
+  display: none;
+}
+
+/* Footer  */
+.footer {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #bab4b4;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  width: 25%;
+}
+
+.box2 {
+  width: 25%;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.box2 h3 {
+  margin-bottom: 15px;
+
+}
+
+.box2 li {
+  list-style: none;
+  margin-bottom: 1px;
+  padding-bottom: 5px;
+}
+
+.nav2 {
+  text-decoration: none;
+  color: #0008ff;
+  font-size: 16px;
+}
+
+.nav2:hover {
+  color: #6d86dc;
+}
+
+.box p {
+  margin-top: 25px;
+}
+
+
+.box img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+.icons img {
+  width: 40px;
+  padding: -80px;
+  margin-top: 15px;
+}
+
+h2 {
+  margin-top: 15px;
+}
+
+.box h2 {
+  margin-top: -20px;
+}
+
+.box p {
+  margin-top: auto;
+}
+
+
+/* yeudya paise  */
+
+.donate2 {
+  font-family: 'Baloo 2', sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+.donation-box {
+  background: #f2913c;
+  padding: 20px 25px 5px 25px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+.title-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  background-color: #4f58b8;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  margin: 0 0 0 35px;
+}
+
+.btn:hover {
+  background-color: #0f0a35;
+}
+
+#donationDetails {
+  display: none;
+  margin-top: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 10px;
+  font-size: 14.9px;
+}
+
+.bank-details,
+.qr-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.qr-section h3 {
+  margin: 0 0 0 10px;
+}
+
+/* QR image */
+#qrImage {
+  display: none;
+  margin: 15px 0 0 35px;
+  max-width: 95%;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Show/hide animation */
+.slide-down {
+  animation: slideDown 0.4s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+#qrDownload {
+  display: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 680px) {
+  .title-section {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 15px;
+  }
+
+  .title-text {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  #donationDetails {
+    flex-direction: column;
+  }
+
+  .bank-details,
+  .qr-section {
+    min-width: 95%;
+    margin: 0 0 0 -25px;
+  }
+}
